@@ -1,0 +1,143 @@
+main{    
+
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    justify-content: center;
+
+}
+
+:root{
+    --main-bg-color: #060144;
+    --section-bg-color: #0c0468;
+    --text-color: #f4f5f4;
+    --font-family: "Berlin-Sans", sans-serif;
+    --fuente-oscura: #000000; 
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 2vw 2vw 0;
+    position: relative;
+    isolation: isolate;   
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    inset: -10px;
+    z-index: -1;
+    background-image: url('src/assets/fondoport.png');
+    image-rendering: pixelated;
+    background-size: 1200px auto;
+    background-repeat: repeat;
+    background-position: 0 0;
+    animation: fondoDiagonal 15s linear infinite alternate;
+}
+
+@keyframes fondoDiagonal{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100px -100px;
+    }
+}
+
+.foto{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    width: 500px;
+    height: auto;
+    background-image: url('src/assets/planeta.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+
+
+
+
+h2{
+    font-size: 2cqh;
+}
+
+.presentacion h1{
+    background: linear-gradient(180deg, #bd03ce, #ff00d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7cqh;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: var(--font-family) !important;
+}
+
+.presentacion h2{
+    color: var(--color);
+    font-family: var(--font-family) !important;
+}
+
+
+.detalles{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.detalles p{
+    font-family: var(--font-family);
+    color: var(--fuente-oscura);
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
+    border-radius: 45px;
+    background-color: rgb(12 4 104 / 75%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+}
+
+
+
+.presentacion{
+   flex-direction: row;
+   box-shadow: 0 0 0 0;
+}
+
+.sobremi{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+
+
