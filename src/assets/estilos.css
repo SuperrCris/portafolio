@@ -5,15 +5,17 @@ main{
     gap: 20px;
     max-width: 1200px;
     justify-content: center;
-
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 :root{
     --main-bg-color: #060144;
     --section-bg-color: #0c0468;
     --text-color: #f4f5f4;
-    --font-family: "Berlin-Sans", sans-serif;
+    --font-family:sans-serif;
     --fuente-oscura: #000000; 
+    --fuente-contenido: clamp(1rem, 2vw, 1.5rem);
 }
 
 body{
@@ -33,7 +35,7 @@ body::before{
     position: fixed;
     inset: -10px;
     z-index: -1;
-    background-image: url('src/assets/fondoport.png');
+    background-image: url('./fondoport.png');
     image-rendering: pixelated;
     background-size: 1200px auto;
     background-repeat: repeat;
@@ -56,9 +58,9 @@ body::before{
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
-    width: 500px;
+    width: clamp(100px, 50%, 300px);
     height: auto;
-    background-image: url('src/assets/planeta.png');
+    background-image: url('./planeta.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +72,12 @@ body::before{
 
 
 h2{
-    font-size: 2cqh;
+    font-size:clamp(1rem, 2vw,3rem);
+}
+
+p{
+    font-size: var(--fuente-contenido);
+    font-family: var(--font-family);
 }
 
 .presentacion h1{
@@ -78,7 +85,7 @@ h2{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 7cqh;
+    font-size: clamp(3.4rem, 7vw, 6.8rem);
     margin-top: 0;
     margin-bottom: 1rem;
     font-family: var(--font-family) !important;
@@ -94,6 +101,7 @@ h2{
     display: flex;
     flex-direction: row;
     gap: 10px;
+
 }
 
 .detalles p{
@@ -114,13 +122,12 @@ section{
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
-    border-radius: 45px;
+    border-radius: 10px;
     background-color: rgb(12 4 104 / 75%);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    
+
 
 }
-
 
 
 .presentacion{
@@ -134,8 +141,209 @@ section{
     flex-direction: column;
     gap: 10px;
     margin: 20px;
-    text-align: center;
+    text-align: left;
+    font-size: var(--fuente-contenido);
+    font-family: var(--font-family);
 }
+
+.informacion{
+    font-family: var(--font-family);
+    font-size: clamp(2rem, 2vw, 1.5rem);
+}
+
+
+	.contenedorproyectos{
+		flex-direction: column;
+		gap: 20px;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		display: grid;
+		grid-auto-rows: minmax(50px, auto);
+	}
+	.contenedorproyectos h2{
+		font-size: 2rem;
+		width: 100%;
+		margin-bottom: 1rem;
+		font-family: "Arial", sans-serif;
+		display: grid;
+		grid-row-start: 1;
+		grid-row-end: span -1; 
+		grid-column-start: 1;
+		grid-column: 1 / -1;
+	}
+
+	.proyecto{
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: start;
+		border-radius: 18px;
+		overflow: hidden;
+		background: rgba(255, 255, 255, 0.04);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		min-height: 220px;
+	}
+
+	.proyecto .imagen{
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		height: 110px;
+		width: 100%;
+		background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03));
+		position: relative;
+	}
+
+	.proyecto .imagen::before {
+		content: "";
+		position: absolute;
+		inset: 50% auto auto 50%;
+		width: 52px;
+		height: 52px;
+		border-radius: 14px;
+		transform: translate(-50%, -50%);
+		background: rgba(255, 255, 255, 0.22);
+		box-shadow: inset 0 0 0 2px rgba(255,255,255,0.18);
+	}
+
+	.proyecto h1{
+		font-size: 1.5rem;
+		margin: 0 0 0.5rem 0;
+		font-family: var(--font-family);
+		color: var(--text-color);
+	}
+		.proyecto p{
+		font-size: 1rem;
+		margin: 0 0 0.5rem 0;
+		font-family: var(--font-family);
+		color: var(--text-color);
+		}
+
+	.proyecto .descripcion{
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: start;
+		min-height: 5vh;
+		padding: 1rem;
+	}
+
+	.detalles {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+    li{
+          font-size: var(--fuente-contenido);
+    font-family: var(--font-family);
+    }
+	.boton {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4rem;
+		min-height: 46px;
+		padding:0px 0.5rem;
+		border-radius: 999px;
+		color: #fffffc;
+		font-family: var(--font-family);
+		font-size: 0.95rem;
+		font-weight: 700;
+		text-decoration: none;
+		box-shadow: 0 10px 25px rgba(64, 156, 148, 0.22);
+		transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+		position: relative;
+		overflow: hidden;
+        margin-bottom: 10px;
+	}
+
+	.boton-icono {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.1rem;
+		height: 1.1rem;
+		flex-shrink: 0;
+	}
+
+	.boton-icono svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.boton::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(120deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2));
+		transform: translateX(-100%);
+		transition: transform 0.35s ease;
+	}
+
+	.boton:hover {
+		transform: translateY(-2px) scale(1.02);
+		box-shadow: 0 16px 28px rgba(64, 156, 148, 0.28);
+		filter: brightness(1.05);
+	}
+
+	.boton:hover::before {
+		transform: translateX(100%);
+	}
+
+	.boton-github {
+		background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #409c94 100%);
+	}
+
+	.boton-linkedin {
+		background: linear-gradient(135deg, #004182 0%, #0a66c2 50%, #4da3ff 100%);
+	}
+
+    .descripcion-sobre-mi {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+@media (max-width: 720px) {
+    .presentacion{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto{
+        width: 100%;
+        max-width: 100px;
+    }
+
+    .detalles{
+            justify-content: center;
+    }
+}
+
+    .cajadeherramientas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		display: grid;
+		grid-auto-rows: minmax(50px, auto);
+    }
+	.tecnologia {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+    .tecnologia img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
 
 
 
