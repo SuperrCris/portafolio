@@ -15,7 +15,7 @@ main{
     --text-color: #f4f5f4;
     --font-family:sans-serif;
     --fuente-oscura: #000000; 
-    --fuente-contenido: clamp(1rem, 2vw, 1.5rem);
+    --fuente-contenido: clamp(1rem, 1cqh, 1.5rem);
 }
 
 body{
