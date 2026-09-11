@@ -312,6 +312,10 @@ section{
 		background: linear-gradient(135deg, #004182 0%, #0a66c2 50%, #4da3ff 100%);
 	}
 
+	.boton-cv {
+		background: linear-gradient(135deg, #087f5b 0%, #12b886 50%, #63e6be 100%);
+	}
+
     .descripcion-sobre-mi {
         display: flex;
         flex-direction: row;
@@ -339,6 +343,12 @@ section{
 		font-weight: normal;
         text-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 	}
+	.subtitulo-seccion {
+		font-weight: normal;
+        text-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        text-align: center;
+		margin-block-end:0px;
+	}
 
     .cajadeherramientas {
         display: flex;
@@ -349,6 +359,8 @@ section{
 		display: grid;
 		grid-auto-rows: minmax(50px, auto);
     }
+	
+
 	.tecnologia {
 		display: flex;
 		flex-direction: column;
