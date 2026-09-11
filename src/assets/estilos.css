@@ -1,12 +1,17 @@
 main{    
-
     flex-direction: column;
     display: flex;
     gap: 20px;
     max-width: 1200px;
     justify-content: center;
-    -webkit-backdrop-filter: blur(10px);
+
+	
+}
+
+.contenedor{
+	    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+	padding: 20px;
 }
 
 :root{
@@ -16,6 +21,8 @@ main{
     --font-family:sans-serif;
     --fuente-oscura: #000000; 
     --fuente-contenido: clamp(1rem, 1cqh, 1.5rem);
+	--gradiente-rosado:linear-gradient(180deg, #bd03ce, #ff00d4);
+	--gradiente-azul:linear-gradient(180deg, #bfbfff, #a0efff);
 }
 
 body{
@@ -25,7 +32,7 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 4vh 2vw 2vw 0;
+    padding: 2vh 2vw 2vw 2vh;
     position: relative;
     isolation: isolate;   
 }
@@ -72,8 +79,8 @@ body::before{
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
-    width: clamp(100px, 50%, 300px);
-    height: auto;
+	width: 100%;
+    height: 100%;
     background-image: url('./planeta.png');
     background-size: contain;
     background-position: center;
@@ -157,6 +164,8 @@ section{
     font-family: var(--font-family);
 }
 
+
+
 .informacion{
     font-family: var(--font-family);
     font-size: clamp(2rem, 2vw, 1.5rem);
@@ -164,11 +173,15 @@ section{
 
 
 	.contenedorproyectos{
-		flex-direction: column;
-		gap: 20px;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		display: grid;
-		grid-auto-rows: minmax(50px, auto);
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		grid-auto-rows: auto;
+		width: fit-content;
+		max-width: 100%;
+		margin: 0 auto;
+
+		background: none;
 	}
 	.contenedorproyectos h2{
 		font-size: 2rem;
@@ -189,7 +202,6 @@ section{
 		justify-content: start;
 		border-radius: 18px;
 		overflow: hidden;
-		background: rgba(255, 255, 255, 0.04);
 		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
 		border: 1px solid rgba(255, 255, 255, 0.12);
 		min-height: 220px;
@@ -203,6 +215,8 @@ section{
 		width: 100%;
 		background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03));
 		position: relative;
+		background-image: url(src/assets/fondopva.webp);
+		background-size: cover;
 	}
 
 	.proyecto .imagen::before {
@@ -218,7 +232,7 @@ section{
 	}
 
 	.proyecto h1{
-		font-size: 1.5rem;
+		font-size: 3cqh;
 		margin: 0 0 0.5rem 0;
 		font-family: var(--font-family);
 		color: var(--text-color);
@@ -317,11 +331,19 @@ section{
 	}
 
     .descripcion-sobre-mi {
-        display: flex;
-        flex-direction: row;
         gap: 1rem;
-        justify-content: space-between;
+        align-items: stretch;
     }
+
+	.sobremi h1{
+    background: var(--gradiente-azul);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
 
 @media (max-width: 720px) {
     .presentacion{
@@ -337,6 +359,20 @@ section{
     .detalles{
             justify-content: center;
     }
+	.descripcion-sobre-mi {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+	.contenedorproyectos {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 500px) {
+	.contenedorproyectos {
+		grid-template-columns: 1fr;
+	}
 }
 
 	h3{
@@ -351,13 +387,10 @@ section{
 	}
 
     .cajadeherramientas {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 120px);
         gap: 1rem;
-        justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-		display: grid;
-		grid-auto-rows: minmax(50px, auto);
+        justify-items: center;
     }
 	
 
@@ -365,10 +398,13 @@ section{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		gap: 0.5rem;
+		width: 120px;
+		height: 120px;
 		border: 1px solid #409c94;
 		background: linear-gradient(180deg, #2c437a50 0%, #1e3a5f50 50%, #409c9450 100%);
-				transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+		transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 	}
 
 	.tecnologia:hover {
