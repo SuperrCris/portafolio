@@ -1,1 +1,365 @@
 import './assets/estilos.css';
+
+// Datos de tecnologías
+
+const tecs = {
+    flutter: { nombre: 'Flutter', imagen: 'src/assets/flutter.svg' },
+    go: { nombre: 'Go', imagen: 'src/assets/go.svg' },
+    java: { nombre: 'Java', imagen: 'src/assets/java.svg' },
+    csharp: { nombre: 'C#', imagen: 'src/assets/csharp.svg' },
+    html: { nombre: 'HTML', imagen: 'src/assets/html.svg' },
+    css: { nombre: 'CSS', imagen: 'src/assets/css.svg' },
+    javascript: { nombre: 'JavaScript', imagen: 'src/assets/js.svg' },
+    nosql: { nombre: 'NoSQL', imagen: 'src/assets/nosql.svg' },
+    sql: { nombre: 'SQL', imagen: 'src/assets/sql.svg' },
+    construct3: { nombre: 'Construct 3', imagen: 'src/assets/construct3.svg' },
+    gcloud: { nombre: 'GCloud', imagen: 'src/assets/gcloud.svg' },
+    unity: { nombre: 'Unity', imagen: 'src/assets/unity.svg' },
+    gamemaker2: { nombre: 'Game Maker Studio 2', imagen: 'src/assets/gamemaker2.svg' },
+    firebase: { nombre: 'Firebase', imagen: 'src/assets/firebase.svg' },
+    admob: { nombre: 'Admob Ads', imagen: 'src/assets/admob.svg' },
+    blender: { nombre: 'Blender', imagen: 'src/assets/blender.svg' },
+    paintnet: { nombre: 'Paint.NET', imagen: 'src/assets/paintnet.png' },
+    audacity: { nombre: 'Audacity', imagen: 'src/assets/audacity.svg' },
+}; 
+
+const tecnologias = {
+  lenguajes: [
+    tecs.flutter,
+    tecs.go,
+    tecs.java,
+    tecs.csharp,
+    tecs.html,
+    tecs.css,
+    tecs.javascript,
+    tecs.nosql,
+    tecs.sql,
+
+  ],
+  software: [
+    tecs.construct3,
+    tecs.gcloud,
+    tecs.unity,
+    tecs.gamemaker2,
+    tecs.firebase,
+    tecs.admob,
+    tecs.blender,
+    tecs.paintnet,
+    tecs.audacity,
+
+  ]
+};
+
+// Datos de proyectos y sus galerías
+const proyectos = {
+  pez: {
+    titulo: 'Pez vs Anzuelos',
+    descripcion: 'Un videojuego donde eres un pez que escapa de los anzuelos el mayor tiempo posible. Aqui aprendi a integrar sistemas de monetizacion tanto de anuncios como de compras dentro de la app. Arte propio con musica de artistas de Newgrounds. Un proyecto que estuvo en Play Store, pero que espera un relanzamiento próximamente.',
+    descripcionbreve: 'Un juego casual donde controlas un pez y debes evitar los anzuelos para sobrevivir el mayor tiempo posible. Usa tus reflejos y objetos para ganar mas puntos',
+    color: 'rgba(34, 167, 153, 0.692)',
+    tecnologias: [tecs.flutter, tecs.paintnet, tecs.audacity, tecs.firebase, tecs.admob, tecs.gcloud],
+    items: [{ tipo: 'video', src: '/src/assets/pva.mp4' }],
+  },
+  cmm: {
+    titulo: 'Circulos Magicos Matematicos',
+    descripcion: 'Un videojuego que adapta el material didactico Circulos Magicos Matematicos a las pantallas. Este videojuego es una propuesta en pos del aprendizaje matematico de los mas pequeños a traves del aprendizaje ludico-mnemotecnico. En colaboracion con mis compañeros y el creador del material original, creamos este MVP funcional que consta de 4 minijuegos principales',
+    descripcionbreve: 'Un juego educativo que lleva el material didactico CMM a formato digital con juegos que facilitan el aprendizaje matematico.',
+    color: 'rgba(167, 34, 34, 0.692)',
+    tecnologias: [tecs.unity, tecs.paintnet, tecs.audacity],
+    items: [{ tipo: 'video', src: '/src/assets/cmm.mp4' }]
+  },
+  vocacional: {
+    titulo: 'Test Belarmino digital',
+    descripcion: 'Este test ayuda a los alumnos de nuevo ingreso a elegir su carrera según sus habilidades y preferencias. Una version digital de un test ya existente que facilita el proceso de orientación vocacional.',
+    descripcionbreve: 'Un test vocacional digital que ayuda a los estudiantes a elegir su carrera según sus habilidades y preferencias.',
+    color: 'rgba(34, 34, 167, 0.692)',
+    tecnologias: [tecs.flutter, tecs.firebase, tecs.gcloud],
+    items: [{ tipo: 'imagen', src: '/src/assets/gallery/vocacional1.webp' }]
+  },
+  runfo: {
+    titulo: 'RUNFO',
+    descripcion: 'Escapa del OVNI mientras sorteas obstaculos. Un videojugo creado para participar en la Opera Game Jam 2020',
+    descripcionbreve: 'Un juego de acción donde debes escapar de un OVNI mientras evitas obstáculos.',
+    color: 'rgba(48, 19, 214, 0.692)',
+    tecnologias: [tecs.gamemaker2, tecs.paintnet, tecs.audacity],
+    items: [
+      { tipo: 'video', src: '/src/assets/runfo.mp4' },
+      { tipo: 'imagen', src: '/src/assets/runfo1.webp' },
+      { tipo: 'imagen', src: '/src/assets/runfospl.webp' }
+    ]
+  },
+  intercambio: {
+    titulo: 'Intercambios Gutierrada',
+    descripcion: 'Organiza y participa en un intercambio navideño digital para el año 2025. Una plataforma que facilita la gestión y participación en eventos de intercambio de regalos durante la temporada navideña.',
+    descripcionbreve: 'Una plataforma digital para organizar y participar en intercambios navideños.',
+    color: 'rgba(34, 167, 167, 0.692)',
+    tecnologias: [tecs.flutter, tecs.firebase],
+    items: [
+      { tipo: 'imagen', src: '/src/assets/intercambios.webp' },
+       { tipo: 'imagen', src: '/src/assets/intercambios1.webp' }
+    ]
+  },
+  pov: {
+    titulo: 'Punto de venta para gimnasio',
+    descripcion: 'Un sistema de punto de venta diseñado específicamente para gimnasios, facilitando la gestión de ventas, inventario y clientes de manera eficiente.',
+    descripcionbreve: 'Un sistema de punto de venta digital para gimnasios que optimiza la gestión de ventas e inventario.',
+    color: 'rgba(167, 34, 167, 0.692)',
+    tecnologias: [tecs.flutter, tecs.gcloud, tecs.go],
+    items: []
+  }
+};
+
+// Estado del modal
+let estadoGaleria = {
+  galeriaActual: null,
+  indexActual: 0
+};
+
+// Elementos del DOM
+const modal = document.getElementById('modal-galeria');
+const modalImagen = document.getElementById('modal-imagen');
+const modalVideo = document.getElementById('modal-video');
+const modalVideoSource = document.getElementById('modal-video-source');
+//const modalContador = document.getElementById('modal-contador');
+const modalTitulo = document.getElementById('modal-titulo');
+const modalThumbnails = document.getElementById('modal-thumbnails');
+const btnAnterior = document.querySelector('.modal-anterior');
+const btnSiguiente = document.querySelector('.modal-siguiente');
+const btnCerrar = document.querySelector('.modal-cerrar');
+const modalTecnologias = document.querySelector('.tecnologias-usadas');
+
+
+function generarProyectos() {
+  const contenedor = document.querySelector('.contenedorproyectos');
+  contenedor.innerHTML = ''; // Limpiar contenedor
+  
+  Object.entries(proyectos).forEach(([id, proyecto]) => {
+    const div = document.createElement('div');
+    div.className = 'proyecto';
+    div.id = id;
+    div.style.backgroundColor = proyecto.color;
+    div.setAttribute('data-galeria', id);
+    
+    let tecnologiasHTML = '';
+    if (proyecto.tecnologias && proyecto.tecnologias.length > 0) {
+      tecnologiasHTML = '<div class="detalles">';
+      proyecto.tecnologias.forEach(tech => {
+        const tecInfo = obtenerTecnologia(tech.nombre);
+        if (tecInfo) {
+          tecnologiasHTML += `
+            <div class="tecnologia-tag" style="display: flex; align-items: center; gap: 6px; padding: 4px 8px; background: rgba(255,255,255,0.1); border-radius: 4px; font-size: 0.85rem;">
+              <img src="${tecInfo.imagen}" alt="${tech}" style="width: 16px; height: 16px; object-fit: contain;">
+              <span>${tech.nombre}</span>
+            </div>
+          `;
+        }
+      });
+      tecnologiasHTML += '</div>';
+    }
+    
+    div.innerHTML = `
+      <div class="imagen"></div>
+      <div class="descripcion">
+        <h1>${proyecto.titulo}</h1>
+        <p>${proyecto.descripcionbreve}</p>
+        ${tecnologiasHTML}
+      </div>
+    `;
+    
+    contenedor.appendChild(div);
+  });
+}
+
+function obtenerTecnologia(nombre) {
+  for (let categoria in tecnologias) {
+    const tech = tecnologias[categoria].find(t => t.nombre === nombre);
+    if (tech) return tech;
+  }
+  return null;
+}
+
+
+function generarTecnologias() {
+  const seccionLenguajes = document.querySelector('[data-seccion="lenguajes"]');
+  if (seccionLenguajes) {
+    seccionLenguajes.innerHTML = '';
+    tecnologias.lenguajes.forEach(tech => {
+      const div = document.createElement('div');
+      div.className = 'tecnologia';
+      div.innerHTML = `
+        <img src="${tech.imagen}" alt="${tech.nombre}">
+        <span>${tech.nombre}</span>
+      `;
+      seccionLenguajes.appendChild(div);
+    });
+  }
+
+  const seccionSoftware = document.querySelector('[data-seccion="software"]');
+  if (seccionSoftware) {
+    seccionSoftware.innerHTML = '';
+    tecnologias.software.forEach(tech => {
+      const div = document.createElement('div');
+      div.className = 'tecnologia';
+      div.innerHTML = `
+        <img src="${tech.imagen}" alt="${tech.nombre}">
+        <span>${tech.nombre}</span>
+      `;
+      seccionSoftware.appendChild(div);
+    });
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  generarTecnologias();
+  generarProyectos();
+  inicializarGaleria();
+});
+
+function inicializarGaleria() {
+  document.querySelectorAll('[data-galeria]').forEach(proyecto => {
+    proyecto.addEventListener('click', () => abrirGaleria(proyecto.dataset.galeria));
+    proyecto.style.cursor = 'pointer';
+  });
+}
+
+btnAnterior.addEventListener('click', () => mostrarAnterior());
+btnSiguiente.addEventListener('click', () => mostrarSiguiente());
+btnCerrar.addEventListener('click', () => cerrarModal());
+
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) cerrarModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!modal.classList.contains('activo')) return;
+  
+  if (e.key === 'ArrowLeft') mostrarAnterior();
+  if (e.key === 'ArrowRight') mostrarSiguiente();
+  if (e.key === 'Escape') cerrarModal();
+});
+
+// Inicializar event listeners en proyectos (ahora movido a inicializarGaleria)
+// document.querySelectorAll('[data-galeria]').forEach(proyecto => {
+//   proyecto.addEventListener('click', () => abrirGaleria(proyecto.dataset.galeria));
+//   proyecto.style.cursor = 'pointer';
+// });
+
+function abrirGaleria(galeriaId) {
+  const galeria = proyectos[galeriaId];
+  
+  if (!galeria || galeria.items.length === 0) {
+    alert('Esta galería aún no tiene imágenes o videos.\n\nPara agregar contenido, edita src/main.js y agrega los elementos en el array de la galería.');
+    return;
+  }
+
+  if (galeria.items.length === 1) {
+    btnAnterior.style.display = 'none';
+    btnSiguiente.style.display = 'none';
+  } else {
+    btnAnterior.style.display = 'block';
+    btnSiguiente.style.display = 'block';
+  }
+
+  estadoGaleria.galeriaActual = galeriaId;
+  estadoGaleria.indexActual = 0;
+  
+  modal.classList.add('activo');
+  document.body.style.overflow = 'hidden';
+  
+  mostrarItem();
+}
+
+function cerrarModal() {
+  modal.classList.remove('activo');
+  document.body.style.overflow = 'auto';
+  modalImagen.style.display = 'none';
+  modalVideo.style.display = 'none';
+  modalVideo.pause();
+}
+
+function mostrarAnterior() {
+  const galeria = proyectos[estadoGaleria.galeriaActual];
+  estadoGaleria.indexActual = (estadoGaleria.indexActual - 1 + galeria.items.length) % galeria.items.length;
+  mostrarItem();
+}
+
+function mostrarSiguiente() {
+  const galeria = proyectos[estadoGaleria.galeriaActual];
+  estadoGaleria.indexActual = (estadoGaleria.indexActual + 1) % galeria.items.length;
+  mostrarItem();
+}
+
+function mostrarItem() {
+  const galeria = proyectos[estadoGaleria.galeriaActual];
+  const item = galeria.items[estadoGaleria.indexActual];
+  
+
+  modalTitulo.textContent = galeria.titulo;
+  const modalDescripcion = document.getElementById('modal-descripcion');
+  modalDescripcion.textContent = galeria.descripcion || '';
+  //modalContador.textContent = `${estadoGaleria.indexActual + 1} / ${galeria.items.length}`;
+  
+
+  if (item.tipo === 'imagen') {
+    modalImagen.src = item.src;
+    modalImagen.style.display = 'block';
+    modalVideo.style.display = 'none';
+  } else if (item.tipo === 'video') {
+    modalVideoSource.src = item.src;
+    modalVideo.load();
+    modalVideo.style.display = 'block';
+    modalImagen.style.display = 'none';
+  }
+  
+  // Actualizar thumbnails
+  actualizarThumbnails();
+  mostrarTecnologias();
+}
+
+function actualizarThumbnails() {
+  const galeria = proyectos[estadoGaleria.galeriaActual];
+  modalThumbnails.innerHTML = '';
+  
+  galeria.items.forEach((item, index) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'modal-thumbnail';
+    
+    if (item.tipo === 'imagen') {
+      const img = document.createElement('img');
+      img.src = item.src;
+      thumb.appendChild(img);
+    } else if (item.tipo === 'video') {
+      const video = document.createElement('video');
+      video.src = item.src;
+      thumb.appendChild(video);
+    }
+    
+    if (index === estadoGaleria.indexActual) {
+      thumb.classList.add('activo');
+    }
+    
+    thumb.addEventListener('click', () => {
+      estadoGaleria.indexActual = index;
+      mostrarItem();
+    });
+    
+    modalThumbnails.appendChild(thumb);
+  });
+}
+
+function mostrarTecnologias() {
+  const tecnologiasusadas = proyectos[estadoGaleria.galeriaActual].tecnologias || [];
+  modalTecnologias.innerHTML = '';
+  console.log("tecnologiasusadas:", tecnologiasusadas);
+  tecnologiasusadas.forEach(tecnologia => {
+    const div = document.createElement('div');
+
+    div.classList.add('tecnologia-tag');
+
+    div.innerHTML = " <img src='" + tecnologia.imagen + "' alt='" + tecnologia.nombre + "'> " + tecnologia.nombre;
+
+    modalTecnologias.appendChild(div);
+  });
+}
