@@ -93,7 +93,11 @@ body::before{
 
 
 h2{
-    font-size:clamp(1rem, 2vw,3rem);
+    font-size:clamp(1rem, 3vw, 3rem);
+	color: transparent;
+	background: linear-gradient(180deg, #e5ffe5, #e4b5ff);
+	-webkit-background-clip: text;
+	background-clip: text;
 }
 
 p{
@@ -210,6 +214,9 @@ section{
 		transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 	}
 
+		.proyecto:hover{
+			background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+		}
 
 
 	.proyecto .imagen{

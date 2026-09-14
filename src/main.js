@@ -58,7 +58,12 @@ const proyectos = {
     descripcionbreve: 'Un juego casual donde controlas un pez y debes evitar los anzuelos para sobrevivir el mayor tiempo posible. Usa tus reflejos y objetos para ganar mas puntos',
     color: 'rgba(34, 167, 153, 0.692)',
     tecnologias: [tecs.flutter, tecs.paintnet, tecs.audacity, tecs.firebase, tecs.admob, tecs.gcloud],
-    items: [{ tipo: 'video', src: '/src/assets/pva.mp4' }],
+    items: [{ tipo: 'video', src: '/src/assets/pva.mp4' },
+      { tipo: 'imagen', src: '/src/assets/fondopva.webp' },
+      { tipo: 'imagen', src: '/src/assets/pva2.webp' },
+      { tipo: 'imagen', src: '/src/assets/pva3.webp' }
+
+    ],
   },
   cmm: {
     titulo: 'Circulos Magicos Matematicos',
@@ -66,19 +71,28 @@ const proyectos = {
     descripcionbreve: 'Un juego educativo que lleva el material didactico CMM a formato digital con juegos que facilitan el aprendizaje matematico.',
     color: 'rgba(167, 34, 34, 0.692)',
     tecnologias: [tecs.unity, tecs.paintnet, tecs.audacity],
-    items: [{ tipo: 'video', src: '/src/assets/cmm.mp4' }]
+    items: [{ tipo: 'video', src: '/src/assets/cmm.mp4' },
+      { tipo: 'imagen', src: '/src/assets/cmm.webp' },
+      { tipo: 'imagen', src: '/src/assets/cmm1.webp' },
+       { tipo: 'imagen', src: '/src/assets/cmm2.webp' },
+       { tipo: 'imagen', src: '/src/assets/cmm4.webp' }
+    ]
   },
   vocacional: {
     titulo: 'Test Belarmino digital',
-    descripcion: 'Este test ayuda a los alumnos de nuevo ingreso a elegir su carrera según sus habilidades y preferencias. Una version digital de un test ya existente que facilita el proceso de orientación vocacional.',
+    descripcion: 'Este test ayuda a los alumnos de nuevo ingreso a elegir su carrera según sus habilidades y preferencias. Una version digital de un test ya existente que facilita el proceso de orientación vocacional. Cuenta con exportacion a Excel y guardado en la nube. Este proyecto fue creado como parte de una tesis universitaria con el unico fin de ayudar.',
     descripcionbreve: 'Un test vocacional digital que ayuda a los estudiantes a elegir su carrera según sus habilidades y preferencias.',
     color: 'rgba(34, 34, 167, 0.692)',
     tecnologias: [tecs.flutter, tecs.firebase, tecs.gcloud],
-    items: [{ tipo: 'imagen', src: '/src/assets/gallery/vocacional1.webp' }]
+    items: [{ tipo: 'imagen', src: '/src/assets/vocacional1.webp' },
+      { tipo: 'imagen', src: '/src/assets/vocacional2.webp'},
+      { tipo: 'imagen', src: '/src/assets/vocacional3.webp' },
+       { tipo: 'imagen', src: '/src/assets/vocacional4.webp' },
+    ]
   },
   runfo: {
     titulo: 'RUNFO',
-    descripcion: 'Escapa del OVNI mientras sorteas obstaculos. Un videojugo creado para participar en la Opera Game Jam 2020',
+    descripcion: 'Escapa del OVNI mientras sorteas obstaculos. Un videojugo creado para participar en la Opera Game Jam 2020 cuyo tema era UFO y solo se contaba con 2 semanas para desarrollarlo. Arte propio y terreno generado proceduralmente',
     descripcionbreve: 'Un juego de acción donde debes escapar de un OVNI mientras evitas obstáculos.',
     color: 'rgba(48, 19, 214, 0.692)',
     tecnologias: [tecs.gamemaker2, tecs.paintnet, tecs.audacity],
@@ -96,16 +110,18 @@ const proyectos = {
     tecnologias: [tecs.flutter, tecs.firebase],
     items: [
       { tipo: 'imagen', src: '/src/assets/intercambios.webp' },
-       { tipo: 'imagen', src: '/src/assets/intercambios1.webp' }
+       { tipo: 'imagen', src: '/src/assets/intercambios1.webp' },
+        { tipo: 'imagen', src: '/src/assets/intercambios2.webp' }
     ]
   },
   pov: {
     titulo: 'Punto de venta para gimnasio',
-    descripcion: 'Un sistema de punto de venta diseñado específicamente para gimnasios, facilitando la gestión de ventas, inventario y clientes de manera eficiente.',
-    descripcionbreve: 'Un sistema de punto de venta digital para gimnasios que optimiza la gestión de ventas e inventario.',
+    descripcion: 'Un sistema de punto de venta digital para gimnasios que optimiza la gestión de ventas e inventario. Un proyecto que aun se encuentra en desarrollo. Integra APIs creadas en Go que se comunican con las APIs de Mercado Pago para el uso de terminales de pago Point Smart 2 y otros servicios en Google Cloud como Firestore para alojar, sincronizar y compartir informacion entre las distintas sucursales.',
+    descripcionbreve: 'Un sistema de punto de venta diseñado específicamente para gimnasios, facilitando la gestión de ventas, inventario y clientes de manera eficiente.',
     color: 'rgba(167, 34, 167, 0.692)',
     tecnologias: [tecs.flutter, tecs.gcloud, tecs.go],
-    items: []
+    items: [   { tipo: 'imagen', src: '/src/assets/pov.webp' },
+        { tipo: 'imagen', src: '/src/assets/pov2.webp' }]
   }
 };
 
