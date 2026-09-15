@@ -1,0 +1,18 @@
+{
+  "name": "Portafolio de Cristian Gámez",
+  "short_name": "Cristian Gámez",
+  "description": "Portafolio de Cristian Gámez, desarrollador de software y videojuegos.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#060144",
+  "background_color": "#060144",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

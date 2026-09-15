@@ -3,24 +3,24 @@ import './assets/estilos.css';
 // Datos de tecnologías
 
 const tecs = {
-    flutter: { nombre: 'Flutter', imagen: 'src/assets/flutter.svg' },
-    go: { nombre: 'Go', imagen: 'src/assets/go.svg' },
-    java: { nombre: 'Java', imagen: 'src/assets/java.svg' },
-    csharp: { nombre: 'C#', imagen: 'src/assets/csharp.svg' },
-    html: { nombre: 'HTML', imagen: 'src/assets/html.svg' },
-    css: { nombre: 'CSS', imagen: 'src/assets/css.svg' },
-    javascript: { nombre: 'JavaScript', imagen: 'src/assets/js.svg' },
-    nosql: { nombre: 'NoSQL', imagen: 'src/assets/nosql.svg' },
-    sql: { nombre: 'SQL', imagen: 'src/assets/sql.svg' },
-    construct3: { nombre: 'Construct 3', imagen: 'src/assets/construct3.svg' },
-    gcloud: { nombre: 'GCloud', imagen: 'src/assets/gcloud.svg' },
-    unity: { nombre: 'Unity', imagen: 'src/assets/unity.svg' },
-    gamemaker2: { nombre: 'Game Maker Studio 2', imagen: 'src/assets/gamemaker2.svg' },
-    firebase: { nombre: 'Firebase', imagen: 'src/assets/firebase.svg' },
-    admob: { nombre: 'Admob Ads', imagen: 'src/assets/admob.svg' },
-    blender: { nombre: 'Blender', imagen: 'src/assets/blender.svg' },
-    paintnet: { nombre: 'Paint.NET', imagen: 'src/assets/paintnet.png' },
-    audacity: { nombre: 'Audacity', imagen: 'src/assets/audacity.svg' },
+    flutter: { nombre: 'Flutter', imagen: '/assets/flutter.svg' },
+    go: { nombre: 'Go', imagen: '/assets/go.svg' },
+    java: { nombre: 'Java', imagen: '/assets/java.svg' },
+    csharp: { nombre: 'C#', imagen: '/assets/csharp.svg' },
+    html: { nombre: 'HTML', imagen: '/assets/html.svg' },
+    css: { nombre: 'CSS', imagen: '/assets/css.svg' },
+    javascript: { nombre: 'JavaScript', imagen: '/assets/js.svg' },
+    nosql: { nombre: 'NoSQL', imagen: '/assets/nosql.svg' },
+    sql: { nombre: 'SQL', imagen: '/assets/sql.svg' },
+    construct3: { nombre: 'Construct 3', imagen: '/assets/construct3.svg' },
+    gcloud: { nombre: 'GCloud', imagen: '/assets/gcloud.svg' },
+    unity: { nombre: 'Unity', imagen: '/assets/unity.svg' },
+    gamemaker2: { nombre: 'Game Maker Studio 2', imagen: '/assets/gamemaker2.svg' },
+    firebase: { nombre: 'Firebase', imagen: '/assets/firebase.svg' },
+    admob: { nombre: 'Admob Ads', imagen: '/assets/admob.svg' },
+    blender: { nombre: 'Blender', imagen: '/assets/blender.svg' },
+    paintnet: { nombre: 'Paint.NET', imagen: '/assets/paintnet.png' },
+    audacity: { nombre: 'Audacity', imagen: '/assets/audacity.svg' },
 }; 
 
 const tecnologias = {
@@ -58,10 +58,10 @@ const proyectos = {
     descripcionbreve: 'Un juego casual donde controlas un pez y debes evitar los anzuelos para sobrevivir el mayor tiempo posible. Usa tus reflejos y objetos para ganar mas puntos',
     color: 'rgba(34, 167, 153, 0.692)',
     tecnologias: [tecs.flutter, tecs.paintnet, tecs.audacity, tecs.firebase, tecs.admob, tecs.gcloud],
-    items: [{ tipo: 'video', src: '/src/assets/pva.mp4' },
-      { tipo: 'imagen', src: '/src/assets/fondopva.webp' },
-      { tipo: 'imagen', src: '/src/assets/pva2.webp' },
-      { tipo: 'imagen', src: '/src/assets/pva3.webp' }
+    items: [{ tipo: 'video', src: '/assets/pva.mp4' },
+      { tipo: 'imagen', src: '/assets/fondopva.webp' },
+      { tipo: 'imagen', src: '/assets/pva2.webp' },
+      { tipo: 'imagen', src: '/assets/pva3.webp' }
 
     ],
   },
@@ -71,11 +71,11 @@ const proyectos = {
     descripcionbreve: 'Un juego educativo que lleva el material didactico CMM a formato digital con juegos que facilitan el aprendizaje matematico.',
     color: 'rgba(167, 34, 34, 0.692)',
     tecnologias: [tecs.unity, tecs.paintnet, tecs.audacity],
-    items: [{ tipo: 'video', src: '/src/assets/cmm.mp4' },
-      { tipo: 'imagen', src: '/src/assets/cmm.webp' },
-      { tipo: 'imagen', src: '/src/assets/cmm1.webp' },
-       { tipo: 'imagen', src: '/src/assets/cmm2.webp' },
-       { tipo: 'imagen', src: '/src/assets/cmm4.webp' }
+    items: [{ tipo: 'video', src: '/assets/cmm.mp4' },
+      { tipo: 'imagen', src: '/assets/cmm.webp' },
+      { tipo: 'imagen', src: '/assets/cmm1.webp' },
+       { tipo: 'imagen', src: '/assets/cmm2.webp' },
+       { tipo: 'imagen', src: '/assets/cmm4.webp' }
     ]
   },
   vocacional: {
@@ -84,10 +84,10 @@ const proyectos = {
     descripcionbreve: 'Un test vocacional digital que ayuda a los estudiantes a elegir su carrera según sus habilidades y preferencias.',
     color: 'rgba(34, 34, 167, 0.692)',
     tecnologias: [tecs.flutter, tecs.firebase, tecs.gcloud],
-    items: [{ tipo: 'imagen', src: '/src/assets/vocacional1.webp' },
-      { tipo: 'imagen', src: '/src/assets/vocacional2.webp'},
-      { tipo: 'imagen', src: '/src/assets/vocacional3.webp' },
-       { tipo: 'imagen', src: '/src/assets/vocacional4.webp' },
+    items: [{ tipo: 'imagen', src: '/assets/vocacional1.webp' },
+      { tipo: 'imagen', src: '/assets/vocacional2.webp'},
+      { tipo: 'imagen', src: '/assets/vocacional3.webp' },
+       { tipo: 'imagen', src: '/assets/vocacional4.webp' },
     ]
   },
   runfo: {
@@ -97,9 +97,9 @@ const proyectos = {
     color: 'rgba(48, 19, 214, 0.692)',
     tecnologias: [tecs.gamemaker2, tecs.paintnet, tecs.audacity],
     items: [
-      { tipo: 'video', src: '/src/assets/runfo.mp4' },
-      { tipo: 'imagen', src: '/src/assets/runfo1.webp' },
-      { tipo: 'imagen', src: '/src/assets/runfospl.webp' }
+      { tipo: 'video', src: '/assets/runfo.mp4' },
+      { tipo: 'imagen', src: '/assets/runfo1.webp' },
+      { tipo: 'imagen', src: '/assets/runfospl.webp' }
     ]
   },
   intercambio: {
@@ -109,9 +109,9 @@ const proyectos = {
     color: 'rgba(34, 167, 167, 0.692)',
     tecnologias: [tecs.flutter, tecs.firebase],
     items: [
-      { tipo: 'imagen', src: '/src/assets/intercambios.webp' },
-       { tipo: 'imagen', src: '/src/assets/intercambios1.webp' },
-        { tipo: 'imagen', src: '/src/assets/intercambios2.webp' }
+      { tipo: 'imagen', src: '/assets/intercambios.webp' },
+       { tipo: 'imagen', src: '/assets/intercambios1.webp' },
+        { tipo: 'imagen', src: '/assets/intercambios2.webp' }
     ]
   },
   pov: {
@@ -120,8 +120,8 @@ const proyectos = {
     descripcionbreve: 'Un sistema de punto de venta diseñado específicamente para gimnasios, facilitando la gestión de ventas, inventario y clientes de manera eficiente.',
     color: 'rgba(167, 34, 167, 0.692)',
     tecnologias: [tecs.flutter, tecs.gcloud, tecs.go],
-    items: [   { tipo: 'imagen', src: '/src/assets/pov.webp' },
-        { tipo: 'imagen', src: '/src/assets/pov2.webp' }]
+    items: [   { tipo: 'imagen', src: '/assets/pov.webp' },
+      { tipo: 'imagen', src: '/assets/pov2.webp' }]
   }
 };
 
@@ -144,6 +144,93 @@ const btnSiguiente = document.querySelector('.modal-siguiente');
 const btnCerrar = document.querySelector('.modal-cerrar');
 const modalTecnologias = document.querySelector('.tecnologias-usadas');
 
+const formularioContacto = document.getElementById('formulario-contacto');
+const estadoFormulario = document.getElementById('estado-formulario');
+const botonEnviar = formularioContacto.querySelector('.boton-enviar');
+const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAAE06T2jhBNboUcbu';
+const urlContacto = import.meta.env.VITE_CONTACT_API_URL || (
+  import.meta.env.DEV
+    ? 'http://localhost:8080/enviar-correo'
+    : 'https://us-central1-portafolio-de-cristian-gamez.cloudfunctions.net/enviarCorreo'
+);
+let turnstileWidgetId;
+
+function mostrarEstadoFormulario(mensaje, tipo = '') {
+  estadoFormulario.textContent = mensaje;
+  estadoFormulario.dataset.tipo = tipo;
+}
+
+function inicializarTurnstile() {
+  if (!turnstileSiteKey) {
+    mostrarEstadoFormulario('Falta configurar VITE_TURNSTILE_SITE_KEY.', 'error');
+    botonEnviar.disabled = true;
+    return;
+  }
+
+  const contenedorTurnstile = formularioContacto.querySelector('.cf-turnstile');
+  contenedorTurnstile.dataset.sitekey = turnstileSiteKey;
+
+  if (window.turnstile) {
+    turnstileWidgetId = window.turnstile.render(contenedorTurnstile, {
+      sitekey: turnstileSiteKey,
+      action: 'contact',
+      callback: () => mostrarEstadoFormulario(''),
+      'expired-callback': () => mostrarEstadoFormulario('La verificación expiró. Complétala de nuevo.', 'error'),
+      'error-callback': () => mostrarEstadoFormulario('No se pudo cargar la verificación. Inténtalo de nuevo.', 'error'),
+    });
+    return;
+  }
+
+  window.addEventListener('load', inicializarTurnstile, { once: true });
+}
+
+formularioContacto.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const tokenTurnstile = window.turnstile?.getResponse(turnstileWidgetId);
+
+  if (!tokenTurnstile) {
+    mostrarEstadoFormulario('Completa la verificación antes de enviar el mensaje.', 'error');
+    return;
+  }
+
+  const formData = new FormData(formularioContacto);
+  const data = {
+    nombre: formData.get('nombre'),
+    correo: formData.get('correo'),
+    contenido: formData.get('contenido'),
+    'cf-turnstile-response': tokenTurnstile,
+  };
+  enviarCorreo(data);
+});
+
+async function enviarCorreo(data) {
+  botonEnviar.disabled = true;
+  mostrarEstadoFormulario('Enviando mensaje...');
+
+  try {
+    const respuesta = await fetch(urlContacto, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams(data),
+    });
+
+    if (!respuesta.ok) {
+      const mensaje = (await respuesta.text()).trim();
+      throw new Error(mensaje || `Error del servidor (${respuesta.status}).`);
+    }
+    formularioContacto.reset();
+    mostrarEstadoFormulario('Mensaje enviado correctamente.', 'exito');
+  } catch (error) {
+    mostrarEstadoFormulario(error.message, 'error');
+  } finally {
+    botonEnviar.disabled = false;
+    window.turnstile?.reset(turnstileWidgetId);
+  }
+}
+
+inicializarTurnstile();
 
 function generarProyectos() {
   const contenedor = document.querySelector('.contenedorproyectos');
@@ -379,3 +466,4 @@ function mostrarTecnologias() {
     modalTecnologias.appendChild(div);
   });
 }
+

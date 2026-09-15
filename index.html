@@ -3,10 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cristian Escalante</title>
-    <meta name="description" content="Portafolio personal de Cristian Escalante" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/src/assets/estilos.css" />
+    <title>Cristian Gámez | Desarrollador de software y videojuegos</title>
+    <meta name="description" content="Portafolio de Cristian Gámez, desarrollador de software especializado en aplicaciones multiplataforma, videojuegos y experiencias digitales." />
+    <meta name="author" content="Cristian Gámez" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#060144" />
+    <link rel="icon" type="image/png" href="/assets/planeta.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cristian Gámez | Desarrollador de software y videojuegos" />
+    <meta property="og:description" content="Conoce el trabajo de Cristian Gámez en desarrollo de software, aplicaciones multiplataforma y videojuegos." />
+    <meta property="og:site_name" content="Portafolio de Cristian Gámez" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Cristian Gámez | Desarrollador de software y videojuegos" />
+    <meta name="twitter:description" content="Portafolio de Cristian Gámez, desarrollador de software y videojuegos." />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "/#persona",
+            "name": "Cristian Gámez",
+            "url": "/",
+            "jobTitle": "Desarrollador de software",
+            "description": "Desarrollador de software especializado en aplicaciones multiplataforma y videojuegos.",
+            "knowsAbout": [
+              "Desarrollo de software",
+              "Aplicaciones multiplataforma",
+              "Desarrollo de videojuegos",
+              "Flutter",
+              "Unity",
+              "JavaScript"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "/#sitio",
+            "url": "/",
+            "name": "Portafolio de Cristian Gámez",
+            "description": "Portafolio profesional de Cristian Gámez.",
+            "inLanguage": "es",
+            "about": { "@id": "/#persona" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div class="contenedor">
@@ -53,11 +97,15 @@
                   desarrollar proyectos completos. Desde entonces he continuado desarrollando mis
                   habilidades en base a esta experiencia inicial.
                 </h3>
+                                             <h3>
+                  Tambien cuento con experiencia en areas administrativas en las que he desarrollado habilidades de organizacion, gestion de proyectos y trabajo en equipo.
+                </h3>
                 <h3>
                   Soy una persona que crea y aporta con toda mi capacidad a los proyectos con los que
-                  colaboro. Sin temor al aprendizaje de nuevas herramientas para crear un mejor software,
+                  colaboro. Tengo como objetivo siempre mejorar y aprender para crear un mejor software,
                   en especial aquel que sirva al prójimo.
                 </h3>
+  
               </div>
             </section>
 
@@ -84,13 +132,17 @@
           <div class="contenedorproyectos"></div>
         </section>
         <h2 style="text-align: center;">¡Contactame!</h2>
-        <section class="contacto">
+        <section style="background-color: transparent; align-items: center;">
+          <div class="contacto"> 
            <div class="foto-mia"> </div>
-          <div class="formulario">
-          <input type="text" placeholder="Tu nombre">
-          <input type="email" placeholder="Tu correo">
-          <textarea placeholder="Tu mensaje"></textarea>
+          <form class="formulario" id="formulario-contacto">
+          <input type="text" name="nombre" placeholder="Tu nombre">
+          <input type="email" name="correo" placeholder="Tu correo">
+          <textarea name="contenido" placeholder="Tu mensaje"></textarea>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAE06T2jhBNboUcbu" data-action="contact" data-theme="auto"></div>
+          <p class="estado-formulario" id="estado-formulario" role="status" aria-live="polite"></p>
           <button class="boton boton-enviar" type="submit">Enviar</button>
+          </form>
           </div>
         </section>
       </main>
