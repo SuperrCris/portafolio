@@ -57,7 +57,7 @@ const proyectos = {
     descripcion: 'Un videojuego donde eres un pez que escapa de los anzuelos el mayor tiempo posible. Aqui aprendi a integrar sistemas de monetizacion tanto de anuncios como de compras dentro de la app. Arte propio con musica de artistas de Newgrounds. Un proyecto que estuvo en Play Store, pero que espera un relanzamiento próximamente.',
     descripcionbreve: 'Un juego casual donde controlas un pez y debes evitar los anzuelos para sobrevivir el mayor tiempo posible. Usa tus reflejos y objetos para ganar mas puntos',
     color: 'rgba(34, 167, 153, 0.692)',
-    tecnologias: [tecs.flutter, tecs.paintnet, tecs.audacity, tecs.firebase, tecs.admob, tecs.gcloud],
+    tecnologias: [tecs.construct3, tecs.paintnet, tecs.audacity, tecs.firebase, tecs.admob, tecs.gcloud],
     items: [{ tipo: 'video', src: '/assets/pva.mp4' },
       { tipo: 'imagen', src: '/assets/fondopva.webp' },
       { tipo: 'imagen', src: '/assets/pva2.webp' },
