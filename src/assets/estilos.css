@@ -29,7 +29,6 @@ main{
 	    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 	padding: 20px;
-	width: 100%;
 }
 
 :root{
@@ -99,10 +98,9 @@ body::before{
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
-	width: min(42%, 480px);
+	width: min(30%, 480px);
 	height: auto;
 	flex: 0 1 42%;
-	min-height: 260px;
     background-image: url('./planeta.png');
     background-size: contain;
     background-position: center;
@@ -115,6 +113,7 @@ body::before{
 	border: 2px solid rgba(5, 47, 145, 0.534); border-radius: 10px;
 	gap: 10px;
 	padding: 10px;
+	background-color: #4e1fc038;
 }
 
 
@@ -689,7 +688,7 @@ section{
 		align-items: center;
 		justify-content: center;
 		gap: 20px;
-		padding: 30px 20px;
+		padding:10px 5px;
 		flex: 1;
 	}
 
@@ -725,6 +724,7 @@ section{
 		justify-content: center;
 		transition: all 0.2s ease;
 		flex-shrink: 0;
+		    margin-bottom: 10px;
 	}
 
 	.modal-anterior:hover,
